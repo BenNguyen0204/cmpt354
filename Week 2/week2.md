@@ -86,15 +86,23 @@
         - 1:N or N:1 means one side many, the other at most one.
         - M:N means both sides many.
     - Participation constraints specify whether participation is mandatory.
-        - Total participation means every entity must participate and is shown with double lines.
-        - Partial participation means participation is optional.
-        - Existence dependency means an entity cannot exist without the relationship.
+        - Total Participation (Existence Dependency). Constraint: Every employee must work for a department and 
+            - Existence Dependecy: Existence dependency means an entity cannot exist without the relationship. (e.g. Every employee must work for a department => Employee is existentially dependent on Department via the Works_For relationship type)
+            - Shown with double lines.
+        - Partial participation. Constraint: Not every employee is a manager
 
-Weak entities have no full key of their own.
-They are identified by a partial key plus the owner entity’s key.
-Partial keys are shown with dashed underlines.
-Identifying relationships use double diamonds.
-Weak entities always have total participation in identifying relationships.
+    ![alt text](w2RelationshipContraints.png)
+
+- **Weak Entities**    
+    - Have no full key of their own.
+    - They are identified by a partial key plus the owner entity’s key.
+    - Weak entity partial keys are shown with dashed underlines 
+    - Identifying relationships use double diamonds: relationship type that relates a weak entity to its owner
+    - Weak entities always have total participation in identifying relationships.
+
+    ![alt text](w2WeakEnti.png)
+
+    ![alt text](w2WeakEnti2.png)
 
 The Enhanced ER (EER) model introduces classes, superclasses, and subclasses.
 Subclasses inherit attributes and relationships from superclasses.
