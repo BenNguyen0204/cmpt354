@@ -104,17 +104,38 @@
 
     ![alt text](w2WeakEnti2.png)
 
-The Enhanced ER (EER) model introduces classes, superclasses, and subclasses.
-Subclasses inherit attributes and relationships from superclasses.
-Specialization creates subclasses based on distinguishing characteristics.
-Generalization abstracts subclasses into a superclass.
-Specialization can be total or partial.
-Subclass sets can be disjoint or overlapping.
+## The Enhanced ER (EER) model 
+- Introduces classes, superclasses, and subclasses.
+- Subclasses inherit attributes and relationships from superclasses.
 
-Design choices exist in conceptual modelling.
-Attribute vs entity (or weak entity).
-Attribute vs subclass.
-Entity vs relationship.
-Superclass vs subclass relationship.
-Binary vs n-ary relationships.
-Multiple ER diagrams may correctly model the same system with different trade-offs.
+![alt text](w2Subclass.png)
+
+- Specialization creates subclasses based on distinguishing characteristics.
+- Generalization abstracts subclasses into a superclass.
+
+![alt text](w2SpecializationNGenralizsation.png)
+
+- Generalization = the bottom-up idea: SECRETARY + ENGINEER are special cases of EMPLOYEE so they generalize into EMPLOYEE
+- Specialization = the top-down idea: EMPLOYEE is being split into SECRETARY and ENGINEER so EMPLOYEE is specialized into those subtypes
+- Contraints:
+
+![alt text](w2Constraints.png)
+
+## Notation Guide
+
+![alt text](w2Guide.png)
+
+![alt text](w2Guide1.png)
+
+## Design choices exist in conceptual modelling.
+- Attribute vs entity (or weak entity).
+- Attribute vs subclass.
+- Entity vs relationship.
+- Superclass vs subclass relationship.
+- Binary vs n-ary relationships.
+- Multiple ER diagrams may correctly model the same system with different trade-offs.
+
+## Example questions:
+- The primary function of UofU is to offers courses to students. A student is identified by a unique student id, and has a name, address and a phone number. Each student is registered in a major at UofU. Visiting students stay at UofU for a year. A course offered by UofU is identified by the department that offers the course and a course#, which is unique within the department. The title and number of credits of a course are also recorded. A course may be offered many times, even within the same semester. Each offering is assigned a section# which is unique for a given course and semester, and is taught by a single instructor. Each instructor is responsible for some section; there are no idle instructors. Instructors have unique names and may teach a number of sections of different courses. For each instructor we like to keep info about their higher degree. A student enrols in a course section and gets a mark for the course. A course may have any number of other courses as prerequisites.
+
+![alt text](w2SampleSol.png)
